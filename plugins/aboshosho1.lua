@@ -81,9 +81,13 @@ local S = [[  ❣ رفع اداري >/: رفع ادمن في المجموعة
   ـ🔸➖🔹➖🔸➖🔹➖
 🃏🔺 dev  ارسل لمعرفة مصنع البوت
 
-#Dev : @SAJJADNOORI
-#Dev_bot : @S94_BOT
-#Dev_Channel : @S94IQ
+#Dev : @abo_shosho98
+#Dev_bot : @aboaloshbot
+#Dev_Channel : 
+اطلب البوت من كروب الدعم ://
+
+
+https://telegram.me/joinchat/CgJAOkDLhldXGB60lzf2yw
 ]]
 reply_msg(reply_id, S, ok_cb, false)
 end
