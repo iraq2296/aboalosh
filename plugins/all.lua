@@ -87,10 +87,6 @@ local function get_link(target)
 end
 
 local function all(msg,target,receiver)
-  local data = load_data(_config.moderation.data)
-  if not data[tostring(target)] then
-    return
-  end
   local text = "All the things I know about this group\n\n"
   local group_type = get_group_type(target)
   text = text.."Group Type: \n"..group_type
@@ -126,7 +122,7 @@ local function all(msg,target,receiver)
 end
 
 local function run(msg, matches)
-  if matches[1] == "all" and matches[2] and is_owner2(msg.from.id, matches[2]) then
+  if matches[1] == "العمل" and matches[2] and is_owner2(msg.from.id, matches[2]) then
     local receiver = get_receiver(msg)
     local target = matches[2]
     return all(msg,target,receiver)
@@ -134,7 +130,7 @@ local function run(msg, matches)
   if not is_owner(msg) then
     return
   end
-  if matches[1] == "all" and not matches[2] then
+  if matches[1] == "العمل" and not matches[2] then
     local receiver = get_receiver(msg)
     return all(msg,msg.to.id,receiver)
   end
@@ -143,9 +139,10 @@ end
 
 return {
   patterns = {
-  "^[#!/](all)$",
-  "^[#!/](all) (%d+)$"
+  "^/(العمل)$",
+  "^/(العمل) (%d+)$"
   },
   run = run
 }
 end
+-- arabic : @mohammedzedan
