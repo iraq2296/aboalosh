@@ -1,42 +1,61 @@
 --[[ 
-$ :) 
--- - ( #MASCO_ماسكو ) - -- 
-$ :) 
--- - ( @IQ_ABS ) - -- 
-$ :) 
---Channel-( @DEV_PROX )-- 
-$ :) 
-]]-- 
+▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
+▀▄ ▄▀                                      ▀▄ ▄▀ 
+▀▄ ▄▀    BY MOHAMMED HISHAM                ▀▄ ▄▀ 
+▀▄ ▄▀   BY MOHAMMEDHISHAM (@oOMOOMOo)      ▀▄ ▄▀ 
+▀▄ ▄▀ JUST WRITED BY MOHAMMED HISHAM       ▀▄ ▄▀   
+▀▄ ▄▀                   كتم الوسائط            ▀▄ ▄▀ 
+▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
+--]]
+do 
 
-local function iq_abs(msg, matches)
-    if is_momod(msg) then
-        return
-    end
-    local data = load_data(_config.moderation.data)
-    if data[tostring(msg.to.id)] then
-        if data[tostring(msg.to.id)]['settings'] then
-            if data[tostring(msg.to.id)]['settings']['media'] then
-                lock_media = data[tostring(msg.to.id)]['settings']['media']
-            end
-        end
-    end
-    local chat = get_receiver(msg)
-    local user = "user#id"..msg.from.id
-    if lock_media == "yes" then
-       delete_msg(msg.id, ok_cb, true)
-       send_large_msg(get_receiver(msg), '🚷❗️ عـۛزيـۛزي " '..msg.from.first_name..'\nمٌمٌـنو؏ نـۧـشۛـړ ٱڵـمـيـډيا هناا.... ‼️\nألتزم بقوۧانيۧن ٱڵمجـمۄعة لتجنب الطرد⛔️🎣\n🕴 #user : @'
-..msg.from.username)
-    end
+local function pre_process(msg) 
+local jalal = msg['id'] 
+  local user = msg.from.id 
+local chat = msg.to.id 
+    local oscar = 'mate:'..msg.to.id 
+    if redis:get(oscar) and msg.media and not is_momod(msg) then 
+
+            delete_msg(msg.id, ok_cb, false) 
+local test = "عزيزي~["..msg.from.first_name.."]".."\n".."يمنع نشر صور فيديوهات صوتيات وكافة الميديا هنا ان تكرر الامر سوف تجبرني على طردك🙂☝️".."\n".."#username: @"..(msg.from.username or " ") 
+reply_msg(jalal, test, ok_cb, true) 
+
+end 
+
+        return msg 
+    end 
+
+local function run(msg, matches) 
+local jalal = msg['id'] 
+
+    if matches[1] == 'كتم الوسائط'  and is_momod(msg) then 
+                    local oscar = 'mate:'..msg.to.id 
+                    redis:set(oscar, true) 
+                    local oscar1 = ' تم كتم جميع الوسائط🔕' 
+reply_msg(jalal, oscar1, ok_cb, true) 
+elseif matches[1] == 'كتم الوسائط' and not is_momod(msg) then 
+local asdy = 'للمشرفين فقط🔴' 
+reply_msg(jalal, asdy, ok_cb, true) 
+
+elseif matches[1] == 'الغاء كتم الوسائط' and not is_momod(msg) then 
+      local oscar = 'mate:'..msg.to.id 
+      redis:del(oscar) 
+    local don = ' تم الغاء كتم الوسائط🔔' 
+reply_msg(jalal, don, ok_cb, true) 
+elseif matches[1] == 'الغاء كتم الوسائط' and not is_momod(msg) then 
+local jalal_aldon = 'للمشرفين فقط🔴' 
+reply_msg(jalal, jalal_aldon, ok_cb, true) 
+end 
+end 
+
+return { 
+    patterns = { 
+    "^(كتم الوسائط)$", 
+    "^(الغاء كتم الوسائط)$" 
+    }, 
+run = run, 
+    pre_process = pre_process 
+} 
+
 end
- 
-return {
-  patterns = {
-"%[(photo)%]",
-"%[(document)%]",
-"%[(video)%]",
-"%[(audio)%]",
-"%[(gif)%]",
-"%[(sticker)%]",
-  },
-  run = iq_abs
 }
