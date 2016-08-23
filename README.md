@@ -15,10 +15,10 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 sudo apt-get upgrade
 
 #4
-git clone https://github.com/iraq2296/abo-shosho98.git
+git clone https://github.com/iraq2296/aboalosh.git
 
 #5
-cd abo-shosho98
+cd aboalosh
 
 #6
 chmod +x launch.sh
@@ -45,4 +45,4 @@ Then restart the bot.
 
 For managing on Telegram.
 ADD [@iMardona](https://telegram.me/iMardona) ❤️
-Subscribe to Source channel [ၣ℡ PROX DEV🔵](https://telegram.me/DEV_PROX) 
+Subscribe to Source channel [ၣ℡ PROX DEV(https://github.com/iraq2296/aboalosh.git)
