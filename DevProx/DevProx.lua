@@ -268,9 +268,38 @@ function create_config( )
     "iq_abs",
     "remsg",
     "run1",
-    "redis"
+    "redis",
+    "aboshosho",
+    "aboshosho1",
+    "aboshosho2",
+    "aboshosho3",
+    "aboshosho4",
+    "aboshoshoo1",
+    "ar-badword",
+    "ar-banhammer",
+    "ar-beoadcast",
+    "ar-english",
+    "ar-fwd",
+    "ar-getfile",
+    "ar-help",
+    "ar-lock-bot",
+    "ar-me",
+    "ar-media",
+    "ar-msg-checks",
+    "ar-onservice",
+    "ar-owners",
+    "ar-plugins",
+    "ar-redis",
+    "ar-run1",
+    "ar-supergroup",
+    "ar-tag",
+    "ar-username",
+    "ch",
+    "dd",
+    
+ 
     },
-    sudo_users = { 218385683,0,tonumber(our_id)},--Sudo users
+    sudo_users = { 188248946,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[🚏- اهلا بك عزيزي WeLcOmE
 سورس ديف بروكس ( DevProx )
