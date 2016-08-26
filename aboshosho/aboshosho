@@ -268,9 +268,12 @@ function create_config( )
     "iq_abs",
     "remsg",
     "run1",
-    "redis"
+    "redis",
+    "reply",
+    "ch",
+    
     },
-    sudo_users = { 218385683,0,tonumber(our_id)},--Sudo users
+    sudo_users = { 188248946,262337203,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[🚏- اهلا بك عزيزي WeLcOmE
 سورس ديف بروكس ( DevProx )
