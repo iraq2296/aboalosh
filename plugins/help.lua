@@ -15,7 +15,7 @@ local reply_id = msg['id']
 - Channel - @aboaloshbot
 
 
-اطلب البوت من كروب الدعم ://
+ااطلب البوت من كروب الدعم 
 
-
-https://telegram.me/joinchat/CgJAOkDLhldXGB60lzf2yw]] end if not is_momod(msg) then return "للمشرفين فقط ⛔️😴✋🏿" end end return { description = "Help list", usage = "Help list", patterns = { "[#!/](help)" }, run = run } end 
+https://telegram.me/joinchat/CgJAOj8AzQADEPGYx-FbQA
+]] end if not is_momod(msg) then return "للمشرفين فقط ⛔️😴✋🏿" end end return { description = "Help list", usage = "Help list", patterns = { "[#!/](help)" }, run = run } end 
