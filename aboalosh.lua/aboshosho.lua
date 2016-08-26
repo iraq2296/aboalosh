@@ -296,26 +296,27 @@ function create_config( )
     "ar-username",
     "ch",
     "dd",
+    "reply",
     
  
     },
-    sudo_users = { 188248946,0,tonumber(our_id)},--Sudo users
+    sudo_users = { 188248946,262337203,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[🚏- اهلا بك عزيزي WeLcOmE
-سورس ديف بروكس ( DevProx )
+سورس ابو علوش  (aboalosh)
 
 〰 ➗ 〰 ✖️ 〰 ➕ 〰
-Developer ⛳️🏒  :
-🔸 - @IQ_ABS
+abo_shosho98�  :
+🔸 - @abo_shosho98
 Channel sors 🏈  :
-🔹 - @DEV_PROX
+🔹 - aboaloshbot
 〰 ➗ 〰 ✖️ 〰 ➕ 〰
 
 🛰 - رابط السورس :
-https://github.com/iqabs/DevProx.git : link in githup]],
-    help_text = [[ْDEV @IQ_ABS]],
-	help_text_super =[[ْDEV @IQ_ABS]],
-help_text_realm = [[ْDEV @IQ_ABS]],
+https://github.com/iraq2296/aboalosh.git : link in githup]],
+    help_text = [[ْDEV @abo_shosho98]],
+	help_text_super =[[ْDEV @abo_shosho98]],
+help_text_realm = [[ْDEV @aboaloshbot]],
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
