@@ -213,25 +213,25 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
-    "onservice",
+    "ar-onservice",
     "inrealm",
     "ingroup",
     "inpm",
-    "banhammer",
+    "ar-banhammer",
     "stats",
     "anti_spam",
     "owners",
     "arabic_lock",
     "set",
     "get",
-    "broadcast",
+    "ar-broadcast",
     "invite",
     "all",
-    "leave_ban",
+    "leave",
     "supergroup",
     "whitelist",
-    "msg_checks",
-    "plugins",
+    "ar-msg_checks",
+    "ar-plugins",
     "send",
     "lk_fwd",
     "lk_media",
@@ -270,21 +270,21 @@ function create_config( )
     "run1",
     "redis"
     },
-    sudo_users = { 218385683,0,tonumber(our_id)},--Sudo users
+    sudo_users = { 273709968,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[??- «Â·« »ﬂ ⁄“Ì“Ì WeLcOmE
-”Ê—” œÌ› »—Êﬂ” ( DevProx )
+    about_text = [[??- √á√•√°√á √à√ü √ö√í√≠√í√≠ WeLcOmE
+√ì√¶√ë√ì √è√≠√ù √à√ë√¶√ü√ì ( DevProx )
 ? ? ? ?? ? ? ?
 Developer ????  :
 ?? - @IQ_ABS
 Channel sors ??  :
 ?? - @DEV_PROX
 ? ? ? ?? ? ? ?
-?? - —«»ÿ «·”Ê—” :
+?? - √ë√á√à√ò √á√°√ì√¶√ë√ì :
 https://github.com/iqabs/DevProx.git : link in githup]],
-    help_text = [[˙DEV @IQ_ABS]],
-	help_text_super =[[˙DEV @IQ_ABS]],
-help_text_realm = [[˙DEV @IQ_ABS]],
+    help_text = [[√∫DEV @IQ_ABS]],
+	help_text_super =[[√∫DEV @IQ_ABS]],
+help_text_realm = [[√∫DEV @IQ_ABS]],
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
